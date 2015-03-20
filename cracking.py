@@ -12,7 +12,7 @@ def crackpolygon(polylines, count, maxGen,attrPts):
             print "Not a closed curve"
         else:
             centroid = rs.CurveAreaCentroid(polyline)
-            centptVert = rs.PointAdd(centroid[0], [0,0,((maxGen-count)/maxGen)*7])
+            centptVert = rs.PointAdd(centroid[0], [0,((maxGen-count)/maxGen)*25,((maxGen-count)/maxGen)+1*7])
             centpt = rs.AddPoint(centptVert)
             curves = rs.ExplodeCurves(polyline)
             for crv in curves:
